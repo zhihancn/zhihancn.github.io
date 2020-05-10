@@ -9,7 +9,7 @@
 	
 	<title>
 	
-		001两数之和 | 
+		PAT乙级1005 | 
 	 
 	薛某的笔记
 	</title>
@@ -98,7 +98,7 @@
 									</a>
 									
 							<ul>
-								<li class="file active">
+								<li class="file">
 									<a href="/2020/04/25/Leetcode%E4%B9%8B%E8%B7%AF/001%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/">
 										001两数之和
 									</a>
@@ -118,7 +118,7 @@
 									</a>
 									
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2020/05/10/PTA/PAT%E4%B9%99%E7%BA%A71005/">
 										PAT乙级1005
 									</a>
@@ -209,12 +209,12 @@
 	<div id="content">
 		<h1 id="article-title">
 
-	001两数之和
+	PAT乙级1005
 </h1>
 <div class="article-meta">
 	
 	<span>薛某</span>
-	<span>2020-04-25 22:16:12</span>
+	<span>2020-05-10 11:04:55</span>
     
 		<div id="article-categories">
             
@@ -223,28 +223,42 @@
 </div>
 
 <div id="article-content">
-	<p><strong>题目描述</strong>：给定一个整数数组<code>nums</code> 和一个目标值 <code>target</code>，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。</p>
-<p>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。</p>
-<p><strong>示例</strong>：</p>
-<pre><code>给定 nums = [2, 7, 11, 15], target = 9
+	<p>转自：<a href="https://zhuanlan.zhihu.com/p/62263029" target="_blank" rel="noopener" title="PAT乙级1005 继续(3n+1)猜想">https://zhuanlan.zhihu.com/p/62263029</a></p>
+<p>卡拉兹(Callatz)猜想已经在1001中给出了描述。在这个题目里，情况稍微有些复杂。<br>当我们验证卡拉兹猜想的时候，为了避免重复计算，可以记录下递推过程中遇到的每一个数。例如对 n=3 进行验证的时候，我们需要计算 3、5、8、4、2、1，则当我们对 n=5、8、4、2 进行验证的时候，就可以直接判定卡拉兹猜想的真伪，而不需要重复计算，因为这 4 个数已经在验证3的时候遇到过了，我们称 5、8、4、2 是被 3“覆盖”的数。我们称一个数列中的某个数 n 为“关键数”，如果 n 不能被数列中的其他数字所覆盖。<br>现在给定一系列待验证的数字，我们只需要验证其中的几个关键数，就可以不必再重复验证余下的数字。你的任务就是找出这些关键数字，并按从大到小的顺序输出它们。<br>输入格式：<br>每个测试输入包含 1 个测试用例，第 1 行给出一个正整数 K (&lt;100)，第 2 行给出 K 个互不相同的待验证的正整数 n (1&lt;n≤100)的值，数字间用空格隔开。<br>输出格式：<br>每个测试用例的输出占一行，按从大到小的顺序输出关键数字。数字间用 1 个空格隔开，但一行中最后一个数字后没有空格。<br>输入样例：<br>6 3 5 6 7 8 11<br>输出样例：<br>7 6</p>
+<p>题目分析：这道题我一开始用的就是普通的for循环去对比每一个被“覆盖”的数，相信大多数人用的是这个方法，也比较简单，但是我在网上看到大神写了一个我没有想到过的方法，感觉挺好的，就拿来分享一下，自己用这个代码的思维写了一下（不知道为什么gcc编译器下一直有段错误，clang下就是正确的，如果有大佬可以帮忙看一下的话求解答！），算法思想是建一个101大小的数组，数组里标记着这个数组是否是“关键数”，然后再一直做for循环，进行对比，改变标记状态。</p>
+<pre><code>#include &lt;stdio.h&gt;
 
-因为 nums[0] + nums[1] = 2 + 7 = 9
-所以返回 [0, 1]</code></pre><p><strong>思路1</strong> ：暴力法</p>
-<pre><code>class Solution {
-public:
-    vector&lt;int&gt; twoSum(vector&lt;int&gt;&amp; nums, int target) {
-       int  i = 0;
-       int j = 0;
-       for(i = 0 ; i&lt;nums.size()-1;i++)
-       {
-           for(j = i+1 ; j&lt;nums.size();j++)
-           if(nums[i]+nums[j]==target)
-           return{i,j};
-       }
-    return {0};
+int main(){
+  int n=0;
+  int a[101]={0};
+  int k=0;
+  scanf(&quot;%d&quot;,&amp;k);
+  for(int i=0;i&lt;k;i++){
+    scanf(&quot;%d&quot;,&amp;n);
+    a[n]=1;
+  }
+  for(int i=1;i&lt;=100;i++){
+    if(a[i]==1){
+      for(int j=i;j&gt;1;){
+        if(j%2==0)
+          j=j/2;
+        else
+          j=(j*3+1)/2;
+        if(a[j]==1&amp;&amp;j&lt;=100){
+          a[j]=0;
+          k--;
+          if(j&lt;i)
+            break;
+        }
+      }
     }
-
-};</code></pre><p>其中 括号内的两个数据类型，一个是<code>vector</code>的<code>nums</code>，一个是<code>int</code>的<code>target</code></p>
+  }
+  for(int i=100;i&gt;=1;i--){
+    if(a[i]==1)
+      printf(&quot;%d%c&quot;,i,--k?&apos; &apos;:&apos;\0&apos;);
+  }
+  return 0;
+}</code></pre><p><strong>printf(“%d%c”,i,–k?’ ‘:’\0’);</strong>这一句做输出超级好用啊！注意%c的空字符为’\0’，如果是%s的话就””可以了。</p>
 
 </div>
 
@@ -252,16 +266,11 @@ public:
     <div class="post-guide">
         <div class="item left">
             
-              <a href="/2020/05/04/%E5%85%B3%E4%BA%8E%E6%97%A5%E4%BD%A0%E5%A4%A7%E7%88%B7%E7%9A%84%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94lab%E5%A4%A7%E4%BD%AC%E7%9A%84%E6%80%BB%E7%BB%93/%E7%AC%AC0%E7%AB%A0/%C2%96%E5%AD%A6%E4%B9%A0%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95%E7%9A%84%E6%A1%86%E6%9E%B6%E6%80%9D%E7%BB%B4/">
-                  <i class="fa fa-angle-left" aria-hidden="true"></i>
-                  第0章
-              </a>
-            
         </div>
         <div class="item right">
             
-              <a href="/2020/04/24/%E5%9B%BD%E5%AF%8C%E8%AE%BA/%E7%AC%AC%E4%B8%80%E7%AF%87/">
-                第一篇
+              <a href="/2020/05/09/%E5%89%91%E6%8C%87OFFER/%E5%8A%A0%E6%B3%95%E8%BF%9B%E5%88%B6/">
+                加法进制
                 <i class="fa fa-angle-right" aria-hidden="true"></i>
               </a>
             

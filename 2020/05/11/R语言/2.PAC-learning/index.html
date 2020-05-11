@@ -160,15 +160,6 @@
 							</ul>
 			
 							<ul>
-								<li class="file">
-									<a href="/2020/05/11/r%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/">
-										r语言概述
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
@@ -263,7 +254,7 @@
 <div id="article-content">
 	<p>PAC(Probably Approximately Correct)是机器学习的核心<br>PAC————一个框架、一个定义<br><strong>机器学习</strong>分为<strong>算法</strong>和<strong>理论</strong></p>
 <p>concept：一个概念、一个定义</p>
-<p>收集图片：人工判断（S集合）————训练集<br>通过逼近概念<br>训练完之后（每得到一个假设，是由是个训练集训练出来的）————学习过程：强烈依赖于S训练集<br>认为数据的标注<br><strong>核心：</strong>在一个假设集里选出一个假设去逼近概念集中的一个概念<br>泛化误差：在训练集之后，给定一个新的测试集，测试他的性能误的概率，可以有一下公式</p>
+<p>收集图片：人工判断（S集合）————训练集<br>通过逼近概念<br>训练完之后（每得到一个假设，是由是个训练集训练出来的）————学习过程：强烈依赖于S训练集<br>认为数据的标注<br><strong>核心：</strong>在一个假设集里选出一个假设去逼近概念集中的一个概念<br>泛化误差：在训练集之后，给定一个新的测试集，测试是否相等的概率，可以有一下公式</p>
 <p>$$<br>R(h)=\underset{x \sim \mathbb{D}}{\mathbb{P}}[\text { h }(x) \neq c(x)]=\underset{x \sim D}{\mathbb{E}}\left[1_{h(x) \neq c(x)}\right]<br>$$</p>
 <p> $x$ 表示一个数据的样本 $c(x)$ 表示一个样本的真实值</p>
 
@@ -276,8 +267,8 @@
         </div>
         <div class="item right">
             
-              <a href="/2020/05/11/r%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/">
-                
+              <a href="/2020/05/11/R%E8%AF%AD%E8%A8%80/1.r%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/">
+                1.r语言概述
                 <i class="fa fa-angle-right" aria-hidden="true"></i>
               </a>
             
@@ -319,5 +310,20 @@
 	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
 </script>
 	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>

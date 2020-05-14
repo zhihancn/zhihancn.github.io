@@ -255,9 +255,13 @@
 	<p>PAC(Probably Approximately Correct)是机器学习的核心<br>PAC————一个框架、一个定义<br><strong>机器学习</strong>分为<strong>算法</strong>和<strong>理论</strong></p>
 <p>concept：一个概念、一个定义</p>
 <p>收集图片：人工判断（S集合）————训练集<br>通过逼近概念<br>训练完之后（每得到一个假设，是由是个训练集训练出来的）————学习过程：强烈依赖于S训练集<br>认为数据的标注<br><strong>核心：</strong>在一个假设集里选出一个假设去逼近概念集中的一个概念<br>泛化误差：在训练集之后，给定一个新的测试集，测试是否相等的概率，可以有一下公式</p>
-<p>$$<br>R(h)=\underset{x \sim \mathbb{D}}{\mathbb{P}}[\text { h }(x) \neq c(x)]=\underset{x \sim D}{\mathbb{E}}\left[1_{h(x) \neq c(x)}\right]<br>$$</p>
-<p> $x$ 表示一个数据的样本 $c(x)$ 表示一个样本的真实值</p>
-
+<script type="math/tex; mode=display">
+R(h)=\underset{x \sim \mathbb{D}}{\mathbb{P}}[\text { h }(x) \neq c(x)]=\underset{x \sim D}{\mathbb{E}}\left[1_{h(x) \neq c(x)}\right]</script><p> $x$ 表示一个数据的样本 $c(x)$ 表示一个样本的真实值</p>
+<p>经验误差：有一些例子可以计算：<strong>训练集</strong>上犯错误的次数，除以m取平均值</p>
+<script type="math/tex; mode=display">\widehat{R}_{S}(h)=\frac{1}{m} \sum_{i=1}^{m} 1_{h\left(x_{i}\right) \neq c\left(x_{i}\right)}</script><p>泛化误差与经验误差不一定相等：经验误差计算的是训练集里的，而泛化误差是整个宇宙集里的</p>
+<p>减小经验误差可以通过增加训练集来实现<br>减小泛化误差需要运用pac框架来实现</p>
+<p>当我们把经验误差$\mathbb E$ 对采样集中$\widehat{R}_{S}(h)$ 的 $s$ 去一个数学期望，那一定是泛化误差： $R(h)$</p>
+<script type="math/tex; mode=display">\underset{S \sim \mathcal{D}^{m}}{\mathbb{E}}\left[\widehat{R}_{S}(h)\right]=\frac{1}{m} \sum_{i=1}^{m} \underset{S \sim \mathbb{D}^{m}}{\mathbb{E}}\left[1_{h\left(x_{i}\right) \neq c\left(x_{i}\right)}\right]=\frac{1}{m} \sum_{i=1}^{m} \underset{S \sim \mathcal{D}^{m}}{\mathbb{E}}\left[1_{h(x) \neq c(x)}\right]</script>
 </div>
 
 

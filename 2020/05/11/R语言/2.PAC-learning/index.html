@@ -260,8 +260,16 @@ R(h)=\underset{x \sim \mathbb{D}}{\mathbb{P}}[\text { h }(x) \neq c(x)]=\underse
 <p>经验误差：有一些例子可以计算：<strong>训练集</strong>上犯错误的次数，除以m取平均值</p>
 <script type="math/tex; mode=display">\widehat{R}_{S}(h)=\frac{1}{m} \sum_{i=1}^{m} 1_{h\left(x_{i}\right) \neq c\left(x_{i}\right)}</script><p>泛化误差与经验误差不一定相等：经验误差计算的是训练集里的，而泛化误差是整个宇宙集里的</p>
 <p>减小经验误差可以通过增加训练集来实现<br>减小泛化误差需要运用pac框架来实现</p>
-<p>当我们把经验误差$\mathbb E$ 对采样集中$\widehat{R}_{S}(h)$ 的 $s$ 去一个数学期望，那一定是泛化误差： $R(h)$</p>
-<script type="math/tex; mode=display">\underset{S \sim \mathcal{D}^{m}}{\mathbb{E}}\left[\widehat{R}_{S}(h)\right]=\frac{1}{m} \sum_{i=1}^{m} \underset{S \sim \mathbb{D}^{m}}{\mathbb{E}}\left[1_{h\left(x_{i}\right) \neq c\left(x_{i}\right)}\right]=\frac{1}{m} \sum_{i=1}^{m} \underset{S \sim \mathcal{D}^{m}}{\mathbb{E}}\left[1_{h(x) \neq c(x)}\right]</script>
+<p>当我们把经验误差$\mathbb E$ 对采样集中$\widehat{R}_{S}(h)$ 的 $s$ 取一个数学期望，那一定是泛化误差： $R(h)$</p>
+<script type="math/tex; mode=display">\underset{S \sim \mathcal{D}^{m}}{\mathbb{E}}\left[\widehat{R}_{S}(h)\right]=\frac{1}{m} \sum_{i=1}^{m} \underset{S \sim \mathbb{D}^{m}}{\mathbb{E}}\left[1_{h\left(x_{i}\right) \neq c\left(x_{i}\right)}\right]=\frac{1}{m} \sum_{i=1}^{m} \underset{S \sim \mathcal{D}^{m}}{\mathbb{E}}\left[1_{h(x) \neq c(x)}\right]</script><p>经验误差是由一个训练集计算出来的 ，有所有训练集-&gt;相当于泛化误差</p>
+<p>训练集很好，但是需要推广-&gt;在测试集或者泛化误差下执行情况</p>
+<p>泛化误差怎么通过pac执行：针对一个特定的$S$(即训练集来说)，可以构造一个算法$R$来计算泛化误差</p>
+<p>PAC-Learning:就是使得这个构造模型的$R$小于等于$\epsilon$这件事的概率需要大于等于$1-\delta$ 即：</p>
+<script type="math/tex; mode=display">\underset{S \sim D^{m}}{\mathbb{P}}\left[R\left(h_{S}\right) \leq \epsilon\right] \geq 1-\delta</script><p>$\epsilon$与$\delta$是任意的且很小</p>
+<p>那么可以理解为：这个算法的泛化误差很小，这件事情出现的概率，接近于1(在训练样本个数$m$足够大的情况下)</p>
+<p>欠学习（经验误差大-&gt;没学好、泛化误差大-&gt;没学会）<br>、过学习(经验误差极低,泛化误差较高-&gt;噪声过多)、正常（追求的是泛化误差低）</p>
+<p>PAC魅力——看不见新的数据，可以测试模型的在新的值的范围</p>
+
 </div>
 
 

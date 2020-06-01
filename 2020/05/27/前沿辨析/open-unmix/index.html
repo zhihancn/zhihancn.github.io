@@ -8,6 +8,8 @@
 	<!-- title -->
 	
 	<title>
+	
+		open_umix | 
 	 
 	薛某的笔记
 	</title>
@@ -125,7 +127,7 @@
 									</a>
 									
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2020/05/27/%E5%89%8D%E6%B2%BF%E8%BE%A8%E6%9E%90/open-unmix/">
 										open-unmix
 									</a>
@@ -265,58 +267,97 @@
 
 	<!-- 引入正文 -->
 	<div id="content">
-		<div id="index">
-	
-		<div class="index-li">
-			<a href="/2020/04/25/%E7%AE%97%E6%B3%95%E4%B8%8E%E8%AF%95%E9%A2%98/Leetcode%E4%B9%8B%E8%B7%AF/001%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/">
-				<h2 class="index-title">
-					001两数之和
-				</h2>
-				<div class="index-brief">
-					题目描述：给定一个整数数组nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
-你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。
-示例：
-给定 nums = [2, 7, 11, 15], target = 9
+		<h1 id="article-title">
 
-因为 n
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-04-25</span>
-                    
-                            
-                    
-                </div>
-		</div>	
+	open-unmix
+</h1>
+<div class="article-meta">
 	
-		<div class="index-li">
-			<a href="/2020/04/24/%E5%9B%BD%E5%AF%8C%E8%AE%BA/%E7%AC%AC%E4%B8%80%E7%AF%87/">
-				<h2 class="index-title">
-					第一篇
-				</h2>
-				<div class="index-brief">
-					
-劳动生产最大的进步，以及所有劳动指向和应用的地方展现出的熟练程度、技能和判断力的提高，似乎都源于分工
-
-论分工越大的公司，分工越细致亚当斯密认为社会各个阶层之所以可以到达普遍富裕，是因为由于分工的存在，由于分工带来的巨量利益，使得在相同的环境中，别人所需的物品，自己有能力供应，对于自身的需求，别人
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-04-24</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-	
-	<div id="index-paginator">
-		
-	</div>
+	<span>薛某</span>
+	<span>2020-05-27 11:43:19</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
 </div>
 
+<div id="article-content">
+	<p><strong>Open-Unmix</strong>提供了现成的模型，使用户可以将流行音乐分为四个部分：人声，鼓，贝斯和其他乐器,是一种用于音乐源分离的深层神经网络</p>
+<p><strong>PyTorch</strong>是一个深度学习领域前景的Python库</p>
+<p>##PyTorch张量</p>
+<p>张量只是多维数组。PyTorch中的张量类似于numpy的ndarrays，另外，张量也可以在GPU上使用。PyTorch支持各种类型的张量。</p>
+<p>你可以如下定义一个简单的一维矩阵：</p>
+<pre><code>import torch
+torch.FloatTensor([2])</code></pre><p><strong>结果</strong>：</p>
+<pre><code>tensor([2.])</code></pre><p>##数学运算<br>与numpy一样，科学计算库非常重要的一点是能够实现高效的数学功能。而PyTorch提供了一个类似的接口，可以使用<strong>200</strong>个以上的数学运算。</p>
+<p>下面是在PyTorch中实现一个简单的添加操作的例子：</p>
+<pre><code>a=torch.FloatTensor([2])
+b=torch.FloatTensor([3])
+
+a+b</code></pre><p><strong>结果</strong>：</p>
+<pre><code>tensor([5.])</code></pre><p>例如，我们要转置一个二维矩阵:</p>
+<pre><code>matrix = torch.randn(3,3) #二维矩阵
+matrix</code></pre><p>二维矩阵：</p>
+<pre><code>tensor([[ 0.3678,  0.2765,  0.1733],
+        [-0.5054, -0.0129,  0.7746],
+        [ 0.1695,  0.8293, -0.7537]])</code></pre><p>转置：</p>
+<pre><code>matrix.t()</code></pre><p><strong>结果</strong>：</p>
+<pre><code>tensor([[ 0.3678, -0.5054,  0.1695],
+        [ 0.2765, -0.0129,  0.8293],
+        [ 0.1733,  0.7746, -0.7537]])</code></pre><p>##Autograd模块<br>PyTorch使用了一种叫做自动微分的技术。也就是说，它会有一个记录我们所有执行操作的记录器，之后再回放记录来计算我们的梯度。这一技术在构建神经网络时尤其有效，因为我们可以通过计算前路参数的微分来节省时间。</p>
+<p>##神经网络模块<br>神经网络可以通过** torch.nn **包来构建。</p>
+<p>现在对于自动梯度<strong>(autograd)</strong>有一些了解，神经网络是基于自动梯度 <strong>(autograd)</strong>来定义一些模型。一个** nn.Module** 包括层和一个方法 <strong>forward(input)</strong> 它会返回输出<strong>(output)</strong>。</p>
+<p>一个典型的神经网络训练过程包括以下几点：</p>
+<ol>
+<li><p>定义一个包含可训练参数的神经网络</p>
+</li>
+<li><p>迭代整个输入</p>
+</li>
+<li><p>通过神经网络处理输入</p>
+</li>
+<li><p>计算损失(loss)</p>
+</li>
+<li><p>反向传播梯度到神经网络的参数</p>
+</li>
+<li><p>更新网络的参数，典型的用一个简单的更新方法：$ weight = weight – learning_rate  \times gradient $</p>
+</li>
+</ol>
+<h1 id="Open-Unmix"><a href="#Open-Unmix" class="headerlink" title="Open-Unmix"></a>Open-Unmix</h1><ol>
+<li>win系统下的安装过程：<br>下载、解压Open-Unmix文件，如果你的笔记本带有独立显卡，请参照“environment-gpu-linux-cuda10.yml” 查看所需清单自行在Anaconda下新建虚拟环境下载安装</li>
+<li>点击<a href="https://doi.org/10.5281/zenodo.3370489" target="_blank" rel="noopener" title="下载链接">https://doi.org/10.5281/zenodo.3370489</a> 选择 MUSDB18-HQ.zip下载并解压至Open-Unmix文件夹下</li>
+<li>随便去基佬云找一首不要钱的歌并下载(音频文件后缀可选 wav，flac，ogg但是不能是mp3)放到Open-Unmix文件里</li>
+<li>打开cmd，选择Open-Unmix文件路径，输入“conda env list”查看所有真实与虚拟的conda环境</li>
+<li>找到需要选择的虚拟环境，使用“activate 选择的虚拟环境”进入</li>
+<li>使用命令“python test.py 文件名 –model umxhq”分离音轨</li>
+<li>等待完成，出现“音频文件名称_umxhq”的文件夹，其中四个文件，分别是：人声，鼓，贝斯和其他</li>
+</ol>
+<p>$PS:$ 全程使用全局模式</p>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2020/05/11/R%E8%AF%AD%E8%A8%80/2.PAC-learning/">
+                2.PAC-learning
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+
+<script>
+	
+	
+</script>
 	</div>
 	<div id="footer">
 	<p>

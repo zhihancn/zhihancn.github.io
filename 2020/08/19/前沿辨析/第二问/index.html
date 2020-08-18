@@ -302,19 +302,24 @@
 
 <div id="article-content">
 	<h2 id="湿度的计算公式"><a href="#湿度的计算公式" class="headerlink" title="湿度的计算公式"></a>湿度的计算公式</h2><p>使用相对湿度(RH)进行计算</p>
-<p>$$\varphi:=\frac{\rho_{w}}{\rho_{w, \max }} \cdot 100 %=\frac{e}{E} \cdot 100 %=\frac{s}{S} \cdot 100 %$$</p>
-<p>使用蒸汽压比饱和蒸汽压进行计算：</p>
+<script type="math/tex; mode=display">
+\varphi:=\frac{\rho_{w}}{\rho_{w, \max }} \cdot 100 \%= \frac{e}{E} \cdot 100 \%= \frac{s}{S} \cdot 100 \%</script><p>使用蒸汽压比饱和蒸汽压进行计算：</p>
 <h3 id="饱和蒸汽压计算"><a href="#饱和蒸汽压计算" class="headerlink" title="饱和蒸汽压计算"></a>饱和蒸汽压计算</h3><p>使用安托因方程进行计算</p>
-<p>$$<br>lgP=A-B/(t+C)<br>$$</p>
-<p>水0~60摄氏度ABC为</p>
+<script type="math/tex; mode=display">
+lgP=A-B/(t+C)</script><p>水0~60摄氏度ABC为</p>
 <p>8.10765 1750.286 235.0</p>
 <p>依照题目中33$^\circ$C</p>
 <p>计算公式为</p>
-<p>$$<br>lgP=8.10765 -1750.286 /(235.0+33)\<br>lgP=1.5767\<br>P=10^{1.5767}\<br>P=37.3<br>$$<br>即：在33摄氏度下，水饱和蒸气压为37.3毫米汞柱</p>
+<script type="math/tex; mode=display">
+lgP=8.10765 -1750.286 /(235.0+33) \\
+lgP=1.5767 \\
+P=10^{1.5767} \\
+P=37.3</script><p>即：在33摄氏度下，水饱和蒸气压为37.3毫米汞柱</p>
 <p>带入公式可以得到不同温度下的饱和蒸汽压</p>
 <p>80%的湿度,可以求出实际蒸汽压</p>
-<p>根据理想气体状态方程<br>$$<br>PV=nRT</p>
-<p>$$<br>计算摩尔数</p>
+<p>根据理想气体状态方程</p>
+<script type="math/tex; mode=display">
+PV=nRT</script><p>计算摩尔数</p>
 <p>可以得到不同温度下的实际蒸汽压</p>
 <p>两者做比，得出不同温度下的湿度</p>
 <h2 id="功率"><a href="#功率" class="headerlink" title="功率"></a>功率</h2><h3 id="压缩机-主机功率"><a href="#压缩机-主机功率" class="headerlink" title="压缩机(主机功率)"></a>压缩机(主机功率)</h3><p>1P：2300W-2500W 。 </p>
@@ -324,7 +329,7 @@
 <p>3P：6500W-7200W。 </p>
 <p>5P：5800W-6200W。</p>
 <p>中央空调的室内风机：风机盘管一般在30~250W之间，而空调箱的风机功率则在0.75KW以上，高的可达30KW以上。</p>
-<p>管壁换热见caj</p>
+<h2 id="换热"><a href="#换热" class="headerlink" title="换热"></a>换热</h2><p>管壁换热见caj</p>
 
 </div>
 
@@ -378,20 +383,5 @@
 	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
 </script>
 	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>

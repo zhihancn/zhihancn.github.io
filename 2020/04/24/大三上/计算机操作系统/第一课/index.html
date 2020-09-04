@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		第一课 操作系统概论 | 
+	 
+	薛某的笔记
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+  
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">薛某的笔记</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">ABOUT</a>
+		</li>
+		
+		<li class="menu-item">
+			<a href="https://github.com/wujun234/uid-generator-spring-boot-starter" class="menu-item-link" target="_blank">
+				UidGenerator
+			</a>
+		</li>
+		<li class="menu-item">
+			<a href="https://github.com/wujun234" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="text" placeholder="search...">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										R语言
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/05/11/R%E8%AF%AD%E8%A8%80/1.r%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/">
+										1.r语言概述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/05/11/R%E8%AF%AD%E8%A8%80/2.PAC-learning/">
+										2.PAC-learning
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										前沿辨析
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/05/27/%E5%89%8D%E6%B2%BF%E8%BE%A8%E6%9E%90/open-unmix/">
+										open-unmix
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/19/%E5%89%8D%E6%B2%BF%E8%BE%A8%E6%9E%90/%E7%AC%AC%E4%BA%8C%E9%97%AE/">
+										第二问
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/05/%E5%89%8D%E6%B2%BF%E8%BE%A8%E6%9E%90/%E8%BD%89%E5%AF%AB/">
+										轉寫
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										国富论
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/04/24/%E5%9B%BD%E5%AF%8C%E8%AE%BA/%E7%AC%AC%E4%B8%80%E7%AF%87/">
+										第一篇
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										大三上
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										计算机操作系统
+									</a>
+									
+							<ul>
+								<li class="file active">
+									<a href="/2020/04/24/%E5%A4%A7%E4%B8%89%E4%B8%8A/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E7%AC%AC%E4%B8%80%E8%AF%BE/">
+										第一课
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/24/%E5%A4%A7%E4%B8%89%E4%B8%8A/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E7%AC%AC%E4%BA%8C%E8%AF%BE/">
+										第二课
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										计算机网络
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/04/24/%E5%A4%A7%E4%B8%89%E4%B8%8A/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E7%AC%AC%E4%B8%80%E8%AF%BE/">
+										第一课
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/24/%E5%A4%A7%E4%B8%89%E4%B8%8A/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E7%AC%AC%E4%BA%8C%E8%AF%BE/">
+										第二课
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										算法与试题
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Leetcode之路
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/04/25/%E7%AE%97%E6%B3%95%E4%B8%8E%E8%AF%95%E9%A2%98/Leetcode%E4%B9%8B%E8%B7%AF/001%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/">
+										001两数之和
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										PTA
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/05/10/%E7%AE%97%E6%B3%95%E4%B8%8E%E8%AF%95%E9%A2%98/PTA/PAT%E4%B9%99%E7%BA%A71005/">
+										PAT乙级1005
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										关于日你大爷的算法——lab大佬的总结
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										第0章
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/05/04/%E7%AE%97%E6%B3%95%E4%B8%8E%E8%AF%95%E9%A2%98/%E5%85%B3%E4%BA%8E%E6%97%A5%E4%BD%A0%E5%A4%A7%E7%88%B7%E7%9A%84%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94lab%E5%A4%A7%E4%BD%AC%E7%9A%84%E6%80%BB%E7%BB%93/%E7%AC%AC0%E7%AB%A0/%C2%96%E5%AD%A6%E4%B9%A0%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95%E7%9A%84%E6%A1%86%E6%9E%B6%E6%80%9D%E7%BB%B4/">
+										学习数据结构和算法的框架思维
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										剑指OFFER
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/05/09/%E7%AE%97%E6%B3%95%E4%B8%8E%E8%AF%95%E9%A2%98/%E5%89%91%E6%8C%87OFFER/%E5%8A%A0%E6%B3%95%E8%BF%9B%E5%88%B6/">
+										加法进制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	第一课
+</h1>
+<div class="article-meta">
+	
+	<span>薛某</span>
+	<span>2020-04-24 18:10:09</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
+</div>
+
+<div id="article-content">
+	<h2 id="什么是操作系统"><a href="#什么是操作系统" class="headerlink" title="什么是操作系统"></a><font size=8>什么是操作系统</font></h2><p><img src="http://i1.fuimg.com/726306/82f72eee9e6ad26b.png" alt=""></p>
+<font size=5>
+<font color=red>操作系统</font>是所有软件中最基础、最核心的部分，是计算机用户和计算机硬件之间的中介程序，它为用户执行程序提供更方便、更有效的环境。
+
+<p>从<font color=red>资源管理</font>的角度来看，操作系统对整个计算机系统内的<strong>所有硬件和软件资源进行管理和调度</strong>，优化资源的利用，协调系统内的各种活动，处理可能出现的种种问题<br><strong>操作系统是硬件之上的的第一层软件(系统程序)</strong></p>
+<h2 id="1-1计算机硬件结构"><a href="#1-1计算机硬件结构" class="headerlink" title="1.1计算机硬件结构"></a>1.1计算机硬件结构</h2><p><font color=red size=6>计算机系统</font>由硬件系统和软件系统组成:<br><font color=blue>硬件系统</font>是指计算机的物理设备：<strong>CPU</strong>（运算器和处理器）、存储器、输入/输出设备、总线<br><font color=blue>软件系统</font>是各种程序、数据和文档资料的总称</p>
+<blockquote>
+<p>[!TIP]<br>硬件是软件建立与活动的<strong>基础</strong>，软件对硬件进行管理和功能<strong>扩充</strong>。   </p>
+</blockquote>
+<p>硬件和软件统称为<font color=blue>资源</font>，由操作系统统一管理</p>
+<p><strong>处理器（CPU）</strong></p>
+<p><strong>CPU</strong>有两种<font color=red >执行状态:</font></p>
+<ol>
+<li><p><font color=red >核心态</font><font size=4>（系统态、管理态）</font></p>
+<ul>
+<li>执行os程序时所处的状态。此时有较<strong>高特权</strong>，可执行一切指令。</li>
+</ul>
+</li>
+<li><p><font color=red >用户态</font></p>
+<ul>
+<li>执行用户程序时所处的状态。<strong>权限较低</strong>，只能执行指令集中的非特权指令。</li>
+</ul>
+</li>
+</ol>
+<h3 id="1-2-1操作系统概念"><a href="#1-2-1操作系统概念" class="headerlink" title="1.2.1操作系统概念"></a>1.2.1操作系统概念</h3><ol>
+<li><p>因为<strong>操作系统实现</strong>两项相对独立的功能：</p>
+<ul>
+<li><a href="####OS作为扩展机器">扩展机器</a>(功能)==&gt;OS隐藏机器物理，称为扩展机  </li>
+<li><a href="####OS作为资源管理者">管理资源</a></li>
+</ul>
+</li>
+<li><p>取决于从<a href="####OS的用户观点和系统观点"><strong>不同角度</strong></a>看待操作系统：</p>
+<ul>
+<li>用户观点  </li>
+<li>系统观点</li>
+</ul>
+</li>
+</ol>
+<h4 id="OS作为扩展机器"><a href="#OS作为扩展机器" class="headerlink" title="OS作为扩展机器"></a>OS作为扩展机器</h4><ol>
+<li>裸机只能识别0、1码，编程困难，操作麻烦。</li>
+<li>OS隐藏机器的物理细节，用户可以使用系统提供的各种命令，直接操作文件。</li>
+<li>经过OS的加工，机器功能更强，使用更方便。</li>
+<li>因此，把裸机上安装各种软件后形成功能强大的机器称为<font color=red >扩展机</font>或<font color=red >虚拟机。</font></li>
+</ol>
+<h4 id="OS作为资源管理者"><a href="#OS作为资源管理者" class="headerlink" title="OS作为资源管理者"></a>OS作为资源管理者</h4><ol>
+<li><p>管理的对象：</p>
+<ul>
+<li>处理器</li>
+<li>存储器</li>
+<li>外部设备</li>
+<li>信息（数据和程序）</li>
+</ul>
+</li>
+<li><p>管理的内容：</p>
+<ul>
+<li>监视各种资源，随时记录它们的状态；</li>
+<li>实施某种策略以决定谁获得资源，何时获得，获得多少；</li>
+<li>分配资源供需求者使用；</li>
+<li>回收资源，以便再分配。</li>
+</ul>
+</li>
+</ol>
+<h4 id="OS的用户观点和系统观点"><a href="#OS的用户观点和系统观点" class="headerlink" title="OS的用户观点和系统观点"></a>OS的用户观点和系统观点</h4><ol>
+<li>用户观点<ul>
+<li>OS为用户提供使用计算机系统的接口</li>
+</ul>
+</li>
+<li>系统观点<ul>
+<li>从系统内部实现的角度看，OS就是资源分配者</li>
+</ul>
+</li>
+</ol>
+<p><strong>对操作系统的理解：</strong></p>
+<ol>
+<li>操作系统是软件，是<strong>系统软件</strong>；</li>
+<li>基本职能是<strong>控制和管理系统内各种资源</strong>，有效组织多道程序运行；</li>
+<li>作为<strong>接口</strong>，提供众多服务，方便用户使用；作为<strong>扩展机</strong>，扩充硬件功能。</li>
+</ol>
+<h3 id="1-2-2-操作系统的主要功能-5种"><a href="#1-2-2-操作系统的主要功能-5种" class="headerlink" title="1.2.2 操作系统的主要功能(5种)"></a>1.2.2 操作系统的主要功能(5种)</h3><ol>
+<li><font color=blue ><b>存储管理</b></font><ul>
+<li>内存分配、地址映射、内存保护、内存扩充</li>
+</ul>
+</li>
+<li><font color=blue ><b>作业和进程管理</b></font><ul>
+<li>作业和进程调度、进程控制、进程通信</li>
+</ul>
+</li>
+<li><font color=blue ><b>设备管理</b></font><ul>
+<li>缓冲区管理、设备分配、设备驱动、设备无关性</li>
+</ul>
+</li>
+<li><font color=blue ><b>文件管理</b></font><ul>
+<li>文件存储空间的管理、文件操作的管理、目录管理等</li>
+</ul>
+</li>
+<li><font color=blue ><b>用户接口服务</b></font>  </li>
+</ol>
+<h4 id="OS为用户提供三种接口"><a href="#OS为用户提供三种接口" class="headerlink" title="OS为用户提供三种接口"></a>OS为用户提供三种接口</h4><ol>
+<li><font color=blue ><b>图形用户接口（GUI）——图形界面</b></font><ul>
+<li>鼠标、窗口、菜单、图标、工具条。</li>
+</ul>
+</li>
+<li><font color=blue ><b>命令行接口——命令界面</b></font><ul>
+<li>键盘输入命令，由命令解释程序（比如unix中的shell）接收并解释，传递给OS内部程序执行。</li>
+</ul>
+</li>
+<li><font color=blue ><b>程序接口——系统调用接口</b></font><ul>
+<li>系统调用是OS内核与用户程序、应用程序之间的接口，位于OS系统的最外层（Linux以C函数形式出现）。所有内核之外的程序都必须经由系统调用才能获得OS的服务。</li>
+<li><strong>Unix/Linux中：fork()、sleep()、wakeup()、exit()</strong></li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>[!TIP]<br>GUI、命令行接口都不属于OS内核，相应的程序在用户空间运行</p>
+</blockquote>
+<p><img src="http://i1.fuimg.com/726306/f3c77deb03a137b5.png" alt=""></p>
+<hr>
+<h2 id="1-3操作系统发展历程"><a href="#1-3操作系统发展历程" class="headerlink" title="1.3操作系统发展历程"></a>1.3操作系统发展历程</h2><ol>
+<li><a href="####手工操作">手工操作</a>(<font color=green >无操作系统时代</font>)</li>
+<li><a href="####单道批处理系统">单道批处理系统</a>(<strong>Simple Batch Processing</strong>)</li>
+<li><a href="####多道批处理系统">多道批处理系统</a>(<strong>Multiprogramming System</strong>)</li>
+<li><a href="####分时系统">分时系统</a>(<strong>Time Sharing System</strong>)</li>
+<li><a href="####实时系统">实时系统</a>(<strong>Real Time System</strong>)</li>
+</ol>
+<h4 id="手工操作"><a href="#手工操作" class="headerlink" title="手工操作"></a>手工操作</h4><ol>
+<li><font color=blue ><b>主要矛盾</b></font><ul>
+<li>CPU处理快，手工操作慢</li>
+</ul>
+</li>
+<li><font color=blue ><b>解决问题</b></font><ul>
+<li>缩短人工操作的时间，使一个作业切换到下一个作业是自动完成的。</li>
+</ul>
+</li>
+<li><font color=blue ><b>途径</b></font><ul>
+<li>批处理：作业处理是成批进行的。</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>[!NOTE]<br>为了解决上述问题，此时人们想出提高工作效率的思想，提出了单道批处理</p>
+</blockquote>
+<p>####单道批处理系统</p>
+<p><strong>批处理</strong>是指系统中有一个<font color=blue>监控程序</font>（<strong>Monitor</strong>），它负责完成用户程序的调入、启动运行和输出运行结果等工作。</p>
+<ul>
+<li>联机：<strong>CPU</strong>直接控制作业输入、结果输出；<ul>
+<li>脱机：卫星机（外围计算机）控制<strong>I/O</strong>。</li>
+</ul>
+</li>
+</ul>
+<p><img src="http://i1.fuimg.com/726306/661f18b908418743.png" alt=""> <font color=red ><strong>主机</strong>既要处理<strong>I/O</strong>设备，又要经行计算</font></p>
+<p><img src="http://i1.fuimg.com/726306/4604b7fc332ef1b9.png" alt=""><font color=red > 把<strong>I/O</strong>设备交给卫星机处理，<strong>主机</strong>只需要经行数据处理即可</font></p>
+<p><img src="http://i1.fuimg.com/726306/3fc8899038cd8be4.png" alt=""></p>
+<ol>
+<li><strong>CPU</strong>和<strong>I/O</strong>设备使用<strong>忙闲不均</strong>（取决于当前作业的特性）。导致资源<strong>利用率低</strong><ul>
+<li>对计算为主的作业，外设空闲；</li>
+<li>对<strong>I/O</strong>为主的作业，<strong>CPU</strong>空闲。</li>
+</ul>
+</li>
+<li>用户独占全机的所有资源，造成浪费。</li>
+</ol>
+<h4 id="多道批处理系统"><a href="#多道批处理系统" class="headerlink" title="多道批处理系统"></a>多道批处理系统</h4><p>利用多道批处理提高资源的利用率。<strong>(CPU和I/O)</strong></p>
+<p>定义：在计算机内存中同时存放几道相互独立的程序，它们在管理程序（定义：在计算机内存中同时存放几道相互独立的程序，它们在管理程序（Monitor升级）的控制下相互穿插地运行。<br>升级）的控制下相互穿插地运行。</p>
+<p><strong>多道程序工作演示：</strong></p>
+<p><img src="http://i1.fuimg.com/726306/403bcbf530aed231.png" alt=""><br>图中由一个CPU和两个设备(可以是外设，也可以是存储器)组成</p>
+<ol>
+<li><font color=red size=6>并行</font>：<strong>微观</strong>上，一个<strong>时间点</strong>同时执行。<strong>多cpu</strong>可以实现进程并行。单<strong>CPU</strong>无法进行并行操作</li>
+<li><font color=red size=6>并发</font>：<strong>宏观</strong>上，一段<strong>时间间隔内</strong>都得到了执行。</li>
+</ol>
+<hr>
+<ol>
+<li>优点<ul>
+<li>资源利用率高：CPU和内存利用率较高</li>
+<li>作业吞吐量大：单位时间内完成的工作总量大</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>用户<strong>交互性差</strong>：整个作业完成后或中间出错时，才与用户交互，不利于调试和修改。</li>
+<li>用户作业的等待时间长</li>
+</ul>
+</li>
+<li>解决交互差的办法：<strong>使用中断技术</strong></li>
+</ol>
+<h4 id="中断技术"><a href="#中断技术" class="headerlink" title="中断技术"></a>中断技术</h4><p><img src="http://i1.fuimg.com/726306/4aabfe66a80805b9.png" alt=""><br>中断是指CPU在收到外部中断信号后，停止原来工作，转去处理该中断事件，完毕后回到原来断点继续工作</p>
+<p>中断信息(地址寄存器)保存至内存控制块</p>
+<blockquote>
+<p>[!IMPORTANT]<br>管理程序发展为执行系统，常驻内存。</p>
+</blockquote>
+<h4 id="分时系统"><a href="#分时系统" class="headerlink" title="分时系统"></a>分时系统</h4><ol>
+<li>一台计算机连接多个终端(可以是计算机，也可以是一份程序)的计算机系统。</li>
+<li>每个终端运行完一个<strong>时间片</strong>，即被时钟中断；也可能没运行完一个时间片，而因为调试中断运行，主动放弃<strong>CPU</strong>。解决了交互性差的问题</li>
+</ol>
+<p><img src="http://i1.fuimg.com/726306/4e7d0c42e8889123.png" alt=""></p>
+<blockquote>
+<p>[!TIP]<br>1个时间片大约几十毫秒</p>
+</blockquote>
+<p><font size=6><b>特征</b></font></p>
+<ol>
+<li><font color=blue>同时性</font>：若干用户可以同时上机使用计算机系统</li>
+<li><font color=blue>交互性</font>：人机对话方便</li>
+<li><font color=blue>独立性</font>：各终端彼此独立工作，互不干扰</li>
+<li><font color=blue>及时性</font>：用户在很短时间内得到系统响应</li>
+</ol>
+<blockquote>
+<p>[!CAUTION]<br>在分时系统的基础上，操作系统的发展开始分化，如实时系统、网络系统、分布式系统等。</p>
+</blockquote>
+<h4 id="实时系统"><a href="#实时系统" class="headerlink" title="实时系统"></a>实时系统</h4><p><font color=red>实时系统</font>是指计算机能<strong>及时</strong>响应外部事件的请求，在<strong>规定时间内</strong>完成对该事件的处理，并<strong>控制所有设备</strong>和<strong>任务协调一致</strong>工作的操作系统。</p>
+<ol>
+<li><font size = 6 color =red ><b>目标：</b></font><ul>
+<li>对外部请求在严格时间范围内做出反应，并有<strong>高可靠性</strong>和<strong>完整性</strong></li>
+</ul>
+</li>
+<li><font size = 6 color =red ><b>特征：</b></font><ul>
+<li><strong>实时性</strong><font size =4>（先实时、后效率）</font>、<strong>高可靠性、容错能力强</strong></li>
+</ul>
+</li>
+<li><font size = 6 color =red ><b>实现方式</b></font><ul>
+<li>硬式实时：对时间严格约束<ul>
+<li>软式实时：对时间限制稍弱</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>典型应用<ul>
+<li><strong>过程控制系统</strong>：工业控制、飞机飞行、军事（神舟飞船、导弹发射） </li>
+<li><strong>信息查询系统</strong>：图书信息查询、仓库、医护</li>
+<li><strong>事务处理系统</strong>：银行财务、民航飞机订票</li>
+</ul>
+</li>
+</ol>
+<p><font size = 6 color =red ><b>实时系统与分时系统的差别</b></font></p>
+<ol>
+<li><font size = 6 color =blue >交互性</font><br>实时系统专业性强，对操作员<strong>要求高</strong>；分时系统应用更广</li>
+<li><font size = 6 color =blue >实时性</font><br>实时系统要求在<strong>ms-ns级</strong>上做出反应；分时系统在s级</li>
+<li><font size = 6 color =blue >可靠性</font><br>实时<strong>系统要求更高</strong>，两套系统同时运行，一套备用</li>
+</ol>
+</font>
+
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2020/04/24/%E5%A4%A7%E4%B8%89%E4%B8%8A/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E7%AC%AC%E4%BA%8C%E8%AF%BE/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  第二课
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2020/04/24/%E5%A4%A7%E4%B8%89%E4%B8%8A/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E7%AC%AC%E4%B8%80%E8%AF%BE/">
+                第一课
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+
+<script>
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2019-<span id="footerYear"></span> 
+	<a href="/">薛某</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/zhihancn" target="_blank">XueYanhan</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+</html>

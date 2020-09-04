@@ -9,7 +9,7 @@
 	
 	<title>
 	
-		PAC-learning | 
+		第二课，类型与结构 | 
 	 
 	薛某的笔记
 	</title>
@@ -107,7 +107,7 @@
 							</ul>
 			
 							<ul>
-								<li class="file active">
+								<li class="file">
 									<a href="/2020/05/11/R%E8%AF%AD%E8%A8%80/2.PAC-learning/">
 										2.PAC-learning
 									</a>
@@ -201,7 +201,7 @@
 							</ul>
 			
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2020/04/24/%E5%A4%A7%E4%B8%89%E4%B8%8A/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E7%AC%AC%E4%BA%8C%E8%AF%BE/">
 										第二课
 									</a>
@@ -356,12 +356,12 @@
 	<div id="content">
 		<h1 id="article-title">
 
-	2.PAC-learning
+	第二课
 </h1>
 <div class="article-meta">
 	
 	<span>薛某</span>
-	<span>2020-05-11 15:22:36</span>
+	<span>2020-04-24 18:10:09</span>
     
 		<div id="article-categories">
             
@@ -370,40 +370,202 @@
 </div>
 
 <div id="article-content">
-	<p>PAC(Probably Approximately Correct)是机器学习的核心<br>PAC————一个框架、一个定义<br><strong>机器学习</strong>分为<strong>算法</strong>和<strong>理论</strong></p>
-<p>concept：一个概念、一个定义</p>
-<p>收集图片：人工判断（S集合）————训练集<br>通过逼近概念<br>训练完之后（每得到一个假设，是由是个训练集训练出来的）————学习过程：强烈依赖于S训练集<br>认为数据的标注<br><strong>核心：</strong>在一个假设集里选出一个假设去逼近概念集中的一个概念<br>泛化误差：在训练集之后，给定一个新的测试集，测试是否相等的概率，可以有一下公式</p>
-<script type="math/tex; mode=display">
-R(h)=\underset{x \sim \mathbb{D}}{\mathbb{P}}[\text { h }(x) \neq c(x)]=\underset{x \sim D}{\mathbb{E}}\left[1_{h(x) \neq c(x)}\right]</script><p> $x$ 表示一个数据的样本 $c(x)$ 表示一个样本的真实值</p>
-<p>经验误差：有一些例子可以计算：<strong>训练集</strong>上犯错误的次数，除以m取平均值</p>
-<script type="math/tex; mode=display">\widehat{R}_{S}(h)=\frac{1}{m} \sum_{i=1}^{m} 1_{h\left(x_{i}\right) \neq c\left(x_{i}\right)}</script><p>泛化误差与经验误差不一定相等：经验误差计算的是训练集里的，而泛化误差是整个宇宙集里的</p>
-<p>减小经验误差可以通过增加训练集来实现<br>减小泛化误差需要运用pac框架来实现</p>
-<p>当我们把经验误差$\mathbb E$ 对采样集中$\widehat{R}_{S}(h)$ 的 $s$ 取一个数学期望，那一定是泛化误差： $R(h)$</p>
-<script type="math/tex; mode=display">\underset{S \sim \mathcal{D}^{m}}{\mathbb{E}}\left[\widehat{R}_{S}(h)\right]=\frac{1}{m} \sum_{i=1}^{m} \underset{S \sim \mathbb{D}^{m}}{\mathbb{E}}\left[1_{h\left(x_{i}\right) \neq c\left(x_{i}\right)}\right]=\frac{1}{m} \sum_{i=1}^{m} \underset{S \sim \mathcal{D}^{m}}{\mathbb{E}}\left[1_{h(x) \neq c(x)}\right]</script><p>经验误差是由一个训练集计算出来的 ，有所有训练集-&gt;相当于泛化误差</p>
-<p>训练集很好，但是需要推广-&gt;在测试集或者泛化误差下执行情况</p>
-<p>泛化误差怎么通过pac执行：针对一个特定的$S$(即训练集来说)，可以构造一个算法$R$来计算泛化误差</p>
-<p>PAC-Learning:就是使得这个构造模型的$R$小于等于$\epsilon$这件事的概率需要大于等于$1-\delta$ 即：</p>
-<script type="math/tex; mode=display">\underset{S \sim D^{m}}{\mathbb{P}}\left[R\left(h_{S}\right) \leq \epsilon\right] \geq 1-\delta</script><p>$\epsilon$与$\delta$是任意的且很小</p>
-<p>那么可以理解为：这个算法的泛化误差很小，这件事情出现的概率，接近于1(在训练样本个数$m$足够大的情况下)</p>
-<p>欠学习（经验误差大-&gt;没学好、泛化误差大-&gt;没学会）<br>、过学习(经验误差极低,泛化误差较高-&gt;噪声过多)、正常（追求的是泛化误差低）</p>
-<p>PAC魅力——看不见新的数据，可以测试模型的在新的值的范围</p>
+	<font size = 5>
 
+<h2 id="操作系统类型"><a href="#操作系统类型" class="headerlink" title="操作系统类型"></a>操作系统类型</h2><ol>
+<li><a href="第一课.md####多道批处理系统">多道批处理系统</a></li>
+<li><a href="第一课.md####分时系统">分时系统</a></li>
+<li><a href="第一课.md####实时系统">实时系统</a></li>
+<li><a href="第二课.md###网络操作系统">网络操作系统</a></li>
+<li><a href="第二课.md###分布式操作系统">分布式操作系统</a></li>
+<li><a href="第二课.md###多处理机操作系统">多处理机操作系统</a></li>
+<li>嵌入式操作系统</li>
+</ol>
+<p>1,2,3,4,5为5种基本操作系统</p>
+<hr>
+<h3 id="网络操作系统"><a href="#网络操作系统" class="headerlink" title="网络操作系统"></a>网络操作系统</h3><p><font color=red><h6>计算机网络的特征</h6></font></p>
+<ol>
+<li><font color=blue>分布性。</font><ul>
+<li>网上节点机可位于不同地点，各自执行自己的任务。</li>
+</ul>
+</li>
+<li><font color=blue>自治性。</font><ul>
+<li>每台计算机都有自己的内存、I/O设备和操作系统，能够独立完成自己承担的任务。</li>
+</ul>
+</li>
+<li><font color=blue>互连性。</font><ul>
+<li>利用互连网络把不同地点的资源连接在一起，在统一的网络操作系统的控制下，实现网络通信和资源共享。</li>
+</ul>
+</li>
+<li><font color=blue>可见性。</font><ul>
+<li>计算机网络中的资源对用户是可见的。用户任务通常在本地机运行，利用网络操作系统提供的服务共享其他主机上的资源。</li>
+</ul>
+</li>
+</ol>
+<p>计算机网络通常是<strong>客户机-服务器结构</strong></p>
+<ul>
+<li>一台或几台功能强大的机器作为服务器，其他机器是单用户的工作站，即客户机。</li>
+<li>服务器上运行<strong>网络操作系统</strong>，客户机上运行<strong>本地操作系统</strong>。</li>
+</ul>
+<p>网络操作系统建立在各个主机的<strong>本地操作系统基础</strong>之上，提供<font color=blue>网络资源共享、网络通信、网络管理、网络服务和网络接口</font>等功能。</p>
+<ul>
+<li>对整个网络实施管理。为用户提供统一方便的网络接口。</li>
+<li>对用户屏蔽了各个主机对相同资源的不同存取方法。</li>
+<li>网络用户只有通过它才能获得网络所提供的各种服务。</li>
+</ul>
+<p><font color=red><h6>网络OS特征</h6></font></p>
+<ol>
+<li><font color=blue>接口一致性。</font><ul>
+<li><font size=4>例如，网用户可用同一命令存取本地文件或远程文件，设备可用一致的路径进行操作。</font></li>
+</ul>
+</li>
+<li><font color=blue>资源透明性。</font><ul>
+<li><font size=4>每用户不必知道每个操作需要哪些资源的支持。网络OS了解整个网络中共享资源的状态和使用情况，根据用户的要求自动做出最优选择。</font></li>
+</ul>
+</li>
+<li><font color=blue>操作可靠性。</font><ul>
+<li><font size=4>对全网的共享资源进行统一管理和调度，某处资源出现故障，可分配其他同类资源完成用户请求。</font></li>
+</ul>
+</li>
+<li><font color=blue>处理自治性。</font><ul>
+<li><font size=4>每台主机都有独立的处理能力。</font></li>
+</ul>
+</li>
+<li><font color=blue>执行并行性。</font><ul>
+<li><font size=4>实现本机上的进程并发，实现各节点机上进程的并行。例如，可通过远程命令在节点机上完成指定任务，在本地机上同时执行其他操作。</font></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="分布式操作系统"><a href="#分布式操作系统" class="headerlink" title="分布式操作系统"></a>分布式操作系统</h3><p><font color=red><h6>特征</h6></font></p>
+<ol>
+<li><font color=blue>透明性。</font><ul>
+<li>对用户隐藏系统内部的细节，例如资源的位置、活动的迁移。</li>
+</ul>
+</li>
+<li><font color=blue>灵活性。</font><ul>
+<li>可根据用户的需求和使用情况，方便地修改和扩充系统。</li>
+</ul>
+</li>
+<li><font color=blue>可靠性（包括可用性、安全性、容错性）。</font><ul>
+<li>系统中某台机器出现故障，其他机器替代工作。</li>
+</ul>
+</li>
+<li><font color=blue>高性能。</font><ul>
+<li>速度快、相应及时、资源利用率高、网络通信能力强。</li>
+</ul>
+</li>
+<li><font color=blue>可扩充性。</font><ul>
+<li>根据使用环境和应用的需要，方便扩充或缩减规模。</li>
+</ul>
+</li>
+</ol>
+<p><font color=red><h6>缺点</h6></font></p>
+<ul>
+<li>供分布式系统使用的软件少（操作系统、编程语言等）。</li>
+<li>通信网络会出现饱和，安全性问题。</li>
+</ul>
+<hr>
+<h3 id="多处理机操作系统"><a href="#多处理机操作系统" class="headerlink" title="多处理机操作系统"></a>多处理机操作系统</h3><p>系统特点：多个CPU共享总线、时钟、内存、外部设备。</p>
+<blockquote>
+<p>[!TIP]<br>产生并行条件</p>
+</blockquote>
+<p>多处理机操作系统分为对称式和非对称式</p>
+<ol>
+<li><strong>对称式</strong><ul>
+<li>每个处理器运行同一个操作系统的副本，彼此通过共享内存实现通信。所有的处理器是对等的，没有主、从之分。任务负载较为平均，性能调节容易。</li>
+</ul>
+</li>
+<li><strong>非对称式：主从模式</strong><ul>
+<li>主处理器：只有一个，运行OS，控制整个系统，管理整个系统的资源，为从处理器分配任务；</li>
+<li>从处理器：有多个，执行主处理器下达的指令或I/O处理。</li>
+</ul>
+</li>
+</ol>
+<h3 id="嵌入式操作系统"><a href="#嵌入式操作系统" class="headerlink" title="嵌入式操作系统"></a>嵌入式操作系统</h3><p>优点：微小、实时、专业、可靠、易裁剪等。</p>
+<p>在机器人、PDA、车载系统、家用电器、手机等通信设备上，都需要一个支持多道程序设计的环境，提供这种环境的操作系统称为嵌入式操作系统。</p>
+<h6> 嵌入式操作系统的应用</h6>
+
+<p><img src="http://i1.fuimg.com/726306/ceae985ce97c5d71.png" alt=""></p>
+<hr>
+<hr>
+<hr>
+<h2 id="操作系统的特性"><a href="#操作系统的特性" class="headerlink" title="操作系统的特性"></a>操作系统的特性</h2><ol>
+<li><a href="第二课.md####并发">并发</a>(concurrency)</li>
+<li><a href="第二课.md####共享">共享</a>(sharing)</li>
+<li><a href="第二课.md####异步性">异步性</a>(asynchronism)</li>
+<li>虚拟(virtual)</li>
+</ol>
+<hr>
+<h4 id="并发"><a href="#并发" class="headerlink" title="并发"></a>并发</h4><p><font color=red><b>并发(concurrency)</b></font>是两个或多个活动在同一时间间隔内发生。<br><font color=red><b>并行(parallel)</b></font>是指多个活动在同一时刻发生。</p>
+<p>在单处理器情况下，处理多道程序时，宏观上<strong>并发</strong>，微观上<strong>交替执行</strong>。</p>
+<p><font color=blue>程序的静态实体是可执行文件，而动态实体是进程（或称作任务），并发指的是进程。<br></font></p>
+<h4 id="共享"><a href="#共享" class="headerlink" title="共享"></a>共享</h4><ol>
+<li><strong>多个</strong>进程共享<strong>有限</strong>的计算机系统资源。<ul>
+<li>多个进程同时占用内存，对内存共享。</li>
+<li>进程并发执行时，对CPU进行共享。</li>
+<li>进程提出对文件读写时，对磁盘进行共享。</li>
+</ul>
+</li>
+</ol>
+<ol start="2">
+<li>为了保证进程能正常活动，系统必须对共享资源实施<strong>有效的管理</strong></li>
+</ol>
+<h4 id="异步性"><a href="#异步性" class="headerlink" title="异步性"></a>异步性</h4><ol>
+<li><font color=red><b>不确定性，</b></font>指系统中各种事件发生顺序的不可预测性。</li>
+<li>不确定性是系统中进程的<strong>并发性</strong>和资源<strong>共享</strong>所带来的<strong>必然结果</strong>。</li>
+<li>进程间由于并发和共享，直接或间接地<strong>互相制约</strong>。<ul>
+<li>进程“时走时停”，运行速度不可预知，比如分时系统。</li>
+<li>无论快慢，都不应该影响结果。</li>
+</ul>
+</li>
+</ol>
+<h4 id="虚拟"><a href="#虚拟" class="headerlink" title="虚拟"></a>虚拟</h4><ol>
+<li><strong>虚拟</strong>指一个物理实体映射为若干个对应的逻辑实体。</li>
+<li><strong>虚拟</strong>是操作系统管理系统资源的重要手段，可提高资源利用率。</li>
+</ol>
+<hr>
+<h2 id="操作系统的结构"><a href="#操作系统的结构" class="headerlink" title="操作系统的结构"></a>操作系统的结构</h2><ol>
+<li><a href="第二课.md###整体系统">整体系统</a></li>
+<li>层次系统</li>
+<li>虚拟机系统</li>
+<li>客户-服务器系统</li>
+</ol>
+<h3 id="整体系统-简单模块组合结构"><a href="#整体系统-简单模块组合结构" class="headerlink" title="整体系统:简单模块组合结构"></a>整体系统:简单模块组合结构</h3><ol>
+<li>这种组织结构是完全没有结构的，面向过程，无序的。</li>
+<li>编写的操作系统是模块集合体，只要需要，<strong>每个过程都可随便调用任一其他过程</strong>。</li>
+<li>模块之间的调用关系是一张大网，彼此直接联系。牵一发而动全身，<strong>可靠性低</strong>。</li>
+</ol>
+<h3 id="层次结构-面向大众一般使用的结构"><a href="#层次结构-面向大众一般使用的结构" class="headerlink" title="层次结构:面向大众一般使用的结构"></a>层次结构:面向大众一般使用的结构</h3><p>按照功能和相互依存关系，把系统中的模块分为若干层，其中任一层模块都建立在它下面一层的基础上，任一模块只能调用比它低的层来得到服务，不能<strong>调用比它高的层</strong>。</p>
+<p><img src="http://i1.fuimg.com/726306/7ad6b01854fccfbf.png" alt=""></p>
+<p><font color=blue>内环权利高、贴近硬件</font></p>
+<ol>
+<li>优点：<ul>
+<li>结构清晰、提高系统的可靠性、可移植性、可维护性。</li>
+</ul>
+</li>
+<li>缺点：<ul>
+<li>设计有困难</li>
+</ul>
+</li>
+</ol>
+<h3 id="虚拟机结构-虚拟机"><a href="#虚拟机结构-虚拟机" class="headerlink" title="虚拟机结构:虚拟机"></a>虚拟机结构:虚拟机</h3></font>
 </div>
 
 
     <div class="post-guide">
         <div class="item left">
             
-              <a href="/2020/05/27/%E5%89%8D%E6%B2%BF%E8%BE%A8%E6%9E%90/open-unmix/">
+              <a href="/2020/04/24/%E5%9B%BD%E5%AF%8C%E8%AE%BA/%E7%AC%AC%E4%B8%80%E7%AF%87/">
                   <i class="fa fa-angle-left" aria-hidden="true"></i>
-                  open-unmix
+                  
               </a>
             
         </div>
         <div class="item right">
             
-              <a href="/2020/05/11/R%E8%AF%AD%E8%A8%80/1.r%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/">
-                1.r语言概述
+              <a href="/2020/04/24/%E5%A4%A7%E4%B8%89%E4%B8%8A/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E7%AC%AC%E4%B8%80%E8%AF%BE/">
+                第一课
                 <i class="fa fa-angle-right" aria-hidden="true"></i>
               </a>
             

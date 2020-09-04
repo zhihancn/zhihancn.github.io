@@ -8,6 +8,8 @@
 	<!-- title -->
 	
 	<title>
+	
+		第二课 | 
 	 
 	薛某的笔记
 	</title>
@@ -228,7 +230,7 @@
 							</ul>
 			
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2020/04/24/%E5%A4%A7%E4%B8%89%E4%B8%8A/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E7%AC%AC%E4%BA%8C%E8%AF%BE/">
 										第二课
 									</a>
@@ -352,38 +354,82 @@
 
 	<!-- 引入正文 -->
 	<div id="content">
-		<div id="index">
-	
-		<div class="index-li">
-			<a href="/2020/05/09/%E7%AE%97%E6%B3%95%E4%B8%8E%E8%AF%95%E9%A2%98/%E5%89%91%E6%8C%87OFFER/%E5%8A%A0%E6%B3%95%E8%BF%9B%E5%88%B6/">
-				<h2 class="index-title">
-					加法进制
-				</h2>
-				<div class="index-brief">
-					题目要求：题目描述写一个函数，求两个整数之和，要求在函数体内不得使用+、-、*、/四则运算符号。
-示例
-13+11 = ？;
-13 的二进制      1 1 0 1    -----a        13
-11 的二进制      1 0 1 1    -----b        11  
+		<h1 id="article-title">
 
- (
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-05-09</span>
-                    
-                            
-                    
-                </div>
-		</div>	
+	第二课
+</h1>
+<div class="article-meta">
 	
-	
-	<div id="index-paginator">
-		
-	</div>
+	<span>薛某</span>
+	<span>2020-04-24 18:10:09</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
 </div>
 
+<div id="article-content">
+	<h2 id="网络的核心"><a href="#网络的核心" class="headerlink" title="网络的核心"></a>网络的核心</h2><h3 id="发展历史"><a href="#发展历史" class="headerlink" title="发展历史"></a>发展历史</h3><ol>
+<li>先前由电话线一对一联系</li>
+<li>由于电话数量增多，互连电话线逐渐不太现实</li>
+<li>之后产生交换机，每个电话只需连接至交换机后，由接线员动态分配至目标电话</li>
+</ol>
+<h3 id="circuit-switching-电路转换"><a href="#circuit-switching-电路转换" class="headerlink" title="circuit switching(电路转换)"></a>circuit switching(电路转换)</h3><ol>
+<li><p>节点可以理解为网络交换设备，具有一定的容量，当分配的资源达到节点的上线，电话提示忙音</p>
+</li>
+<li><p>在主叫和被叫建立联系时，链路完成，通话所有的过程都在这条链路中完成</p>
+</li>
+<li><p>链路建立时，只与主叫和被叫分享，不与其他这条链路的其他主被叫共享</p>
+</li>
+<li><p>资源独享(no sharing)的特性决定了circuit-like guarantee 的保证服务性能</p>
+</li>
+</ol>
+<p>FDM 宽带容量固定 用户按照频率分配</p>
+<p>TDM 时间固定 用户按照时间片分配</p>
+<h3 id="packet-switching"><a href="#packet-switching" class="headerlink" title="packet-switching"></a>packet-switching</h3><p>网络传输的重点:主机的应用层传输数据包</p>
+<p>网络传输的核心:存储与转发(store and forward)</p>
+<p>端到端的传输时间:2L/R(假定端接受数据无延迟)</p>
+<blockquote>
+<p>[!CAUTION]<br>发送端发送的分组数据包到中继节点(网络转发器)时，中继节点需要全部接收来自<strong>发送端</strong>的数据包,才能继续转发至接收端电脑</p>
+</blockquote>
+<blockquote>
+<p>[!IMPORTANT]<br>每个数据段前面都要加上首部构成分组,因为在同一条链路资源中，有着<strong>不同的终端地址的数据包</strong>,所以有必要表示所有的数据包的<strong>去向地址</strong></p>
+</blockquote>
+<h4 id="数据包的队列、延迟、丢失"><a href="#数据包的队列、延迟、丢失" class="headerlink" title="数据包的队列、延迟、丢失"></a>数据包的队列、延迟、丢失</h4><p><img src="http://i1.fuimg.com/726306/eb2cb670d51e58cb.png" alt="演示图"></p>
+<p>图片中A和B分别发送数据包,在节点中排队形成<strong>队列</strong>,链路中既有A的数据包又有B的数据包,并在链路中形成<strong>满速</strong>传输,<strong>如果</strong>节点中的排队的数据包超出的节点容纳(capacity)的上限,发生数据的丢失</p>
+<p><img src="http://i1.fuimg.com/726306/3c95df552c4f4df6.png" alt="演示图"></p>
+<p>最左侧的电路交换需要把节点全部打通(很好理解,因为在主被叫打通前,资源链路便被准备好)<br>需要先进行链接的建立,再经行数据的传输</p>
+<p>中间与右侧为常见的网路交换,右侧比中间的分组更为细致，传输效率更高</p>
+<blockquote>
+<p>[!IMPORTANT]<br>packet-switching 的容量比circuit-switching 的容量要高出许多</p>
+</blockquote>
+<p><img src="http://i1.fuimg.com/726306/a34d4533a3afb557.png" alt=""></p>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2020/04/24/%E5%A4%A7%E4%B8%89%E4%B8%8A/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E7%AC%AC%E4%B8%80%E8%AF%BE/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  第一课
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+        </div>
+    </div>
+
+
+
+
+<script>
+	
+	
+</script>
 	</div>
 	<div id="footer">
 	<p>

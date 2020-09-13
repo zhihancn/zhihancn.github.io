@@ -416,15 +416,15 @@
 <blockquote>
 <p>[!IMPORTANT]<br>每个数据段前面都要加上首部构成分组,因为在同一条链路资源中，有着<strong>不同的终端地址的数据包</strong>,所以有必要表示所有的数据包的<strong>去向地址</strong></p>
 </blockquote>
-<h4 id="数据包的队列、延迟、丢失"><a href="#数据包的队列、延迟、丢失" class="headerlink" title="数据包的队列、延迟、丢失"></a>数据包的队列、延迟、丢失</h4><p><img src="http://i1.fuimg.com/726306/eb2cb670d51e58cb.png" alt="演示图"></p>
+<h4 id="数据包的队列、延迟、丢失"><a href="#数据包的队列、延迟、丢失" class="headerlink" title="数据包的队列、延迟、丢失"></a>数据包的队列、延迟、丢失</h4><p><img src="https://s1.ax1x.com/2020/09/09/w8aS39.png" alt="演示图"></p>
 <p>图片中A和B分别发送数据包,在节点中排队形成<strong>队列</strong>,链路中既有A的数据包又有B的数据包,并在链路中形成<strong>满速</strong>传输,<strong>如果</strong>节点中的排队的数据包超出的节点容纳(capacity)的上限,发生数据的丢失</p>
-<p><img src="http://i1.fuimg.com/726306/3c95df552c4f4df6.png" alt="演示图"></p>
+<p><img src="https://s1.ax1x.com/2020/09/09/w8UBfH.png" alt="演示图"></p>
 <p>最左侧的电路交换需要把节点全部打通(很好理解,因为在主被叫打通前,资源链路便被准备好)<br>需要先进行链接的建立,再经行数据的传输</p>
 <p>中间与右侧为常见的网路交换,右侧比中间的分组更为细致，传输效率更高</p>
 <blockquote>
 <p>[!IMPORTANT]<br>packet-switching 的容量比circuit-switching 的容量要高出许多</p>
 </blockquote>
-<p><img src="http://i1.fuimg.com/726306/a34d4533a3afb557.png" alt=""></p>
+<p><img src="https://s1.ax1x.com/2020/09/09/w8UTcn.png" alt=""></p>
 
 </div>
 
